@@ -1,0 +1,20 @@
+div.axosoftContainer {
+  background-color: forestgreen;
+  font-family: Arial,sans-serif;
+}
+
+div.axosoftContainer td {
+  color: red;
+  font-size: 13px;
+  vertical-align: top;
+}
+
+
+div.axosoftContainer h3 {
+  color: yellowgreen;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0 0 2px;
+  border-bottom: 1px solid #3c78b5;
+}
+
