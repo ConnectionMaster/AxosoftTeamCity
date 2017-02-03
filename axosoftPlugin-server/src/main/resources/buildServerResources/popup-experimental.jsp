@@ -1,6 +1,6 @@
 <jsp:useBean id="issue" scope="request" type="jetbrains.buildServer.issueTracker.Issue"/>
 <script type='text/javascript'>
-    BS.LoadStyleSheetDynamically(base_uri + "/plugins/axosoft/style.css");
+    BS.LoadStyleSheetDynamically(base_uri + "/plugins/axosoftPlugin/style.css");
 </script>
 
 <div class="axosoftContainer">
