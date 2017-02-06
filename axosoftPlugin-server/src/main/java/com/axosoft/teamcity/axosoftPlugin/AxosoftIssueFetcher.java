@@ -25,34 +25,27 @@
  */
 package com.axosoft.teamcity.axosoftPlugin;
 
-import com.axosoft.teamcity.axosoftPlugin.AxosoftIssueProvider;
 import com.intellij.openapi.diagnostic.Logger;
-import java.io.BufferedReader;
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.InputStreamReader;
-import java.io.Reader;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 import jetbrains.buildServer.issueTracker.AbstractIssueFetcher;
 import jetbrains.buildServer.issueTracker.AbstractIssueProvider;
 import jetbrains.buildServer.issueTracker.IssueData;
 import jetbrains.buildServer.util.cache.EhCacheUtil;
-import org.apache.commons.httpclient.Credentials;
-import org.apache.commons.httpclient.HostConfiguration;
-import org.apache.commons.httpclient.HttpClient;
-import org.apache.commons.httpclient.HttpMethod;
-import org.apache.commons.httpclient.HttpsURL;
-import org.apache.commons.httpclient.URIException;
+import org.apache.commons.httpclient.*;
 import org.apache.commons.httpclient.contrib.ssl.EasySSLProtocolSocketFactory;
 import org.apache.commons.httpclient.methods.GetMethod;
 import org.apache.commons.httpclient.protocol.Protocol;
 import org.apache.commons.httpclient.protocol.ProtocolSocketFactory;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
-import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 public class AxosoftIssueFetcher
 extends AbstractIssueFetcher {
@@ -115,6 +108,8 @@ extends AbstractIssueFetcher {
             returnValue.append("defects");
         } else if (param.toUpperCase().equals("F")) {
             returnValue.append("features");
+        }else if (param.toUpperCase().equals("T")) {
+            returnValue.append("tasks");
         } else if (param.toUpperCase().equals("I")) {
             returnValue.append("incidents");
         }
