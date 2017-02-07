@@ -177,7 +177,7 @@ extends AbstractIssueFetcher {
         }
 
         private IssueData parseIssue(InputStream inputStream) {
-            String test = "";
+            String data = "";
             String percent = "";
             String summary = "";
             String state = "";
@@ -188,13 +188,13 @@ extends AbstractIssueFetcher {
                 while ((line = bReader.readLine()) != null) {
                     builder.append(line + "\n");
                 }
-                test = builder.toString();
+                data = builder.toString();
             }
             catch (IOException e) {
                 e.printStackTrace();
             }
             try {
-                JSONObject jsonObject = new JSONObject(test);
+                JSONObject jsonObject = new JSONObject(data);
                 percent = jsonObject.getJSONArray("data").getJSONObject(0).getString("percent_complete");
                 summary = jsonObject.getJSONArray("data").getJSONObject(0).getString("name");
                 state = jsonObject.getJSONArray("data").getJSONObject(0).getJSONObject("workflow_step").getString("name");
