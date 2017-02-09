@@ -7,11 +7,11 @@ Follow instructions for building Plugins as described on Jetbrains' page [here] 
 
 ***
 # Configuration
-1.) Drag and drop axosoftPlugin.zip file into <TeamCity Data Directory>/Plugins
-2.) Restart TeamCity service
-3.) Generate non-expiring token in Axosoft (Tools/System Options/API Settings/Manage Tokens/Create non-expiring token)
-4.) Create a connection to your issue tracker on the Project Settings > Issue Trackers page
-5.) Enter in link to Axosoft account, and non-expiring token from step 3.
+1. Drag and drop axosoftPlugin.zip file into <TeamCity Data Directory>/Plugins
+2. Restart TeamCity service
+3. Generate non-expiring token in Axosoft (Tools/System Options/API Settings/Manage Tokens/Create non-expiring token)
+4. Create a connection to your issue tracker on the Project Settings > Issue Trackers page
+5. Enter in link to Axosoft account, and non-expiring token from step 3.
 
 ***
 # Usage
