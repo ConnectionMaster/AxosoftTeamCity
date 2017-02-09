@@ -1,0 +1,14 @@
+div.axosoftContainer {
+  background-color: white;
+  font-family: Arial,sans-serif;
+}
+
+
+div.axosoftContainer h4 {
+  color: black;
+  font-size: 17px;
+  font-weight: bold;
+  margin: 0 0 2px;
+  border-bottom: 1.4px solid #FF9933;
+}
+

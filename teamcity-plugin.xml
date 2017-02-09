@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<teamcity-plugin xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:schemas-jetbrains-com:teamcity-plugin-v1-xml">
+  <info>
+    <name>axosoftPlugin</name>
+    <display-name>Axosoft</display-name>
+    <version>@Version@</version>
+    <description>Issue Tracking for Axosoft</description>
+    <download-url>https://github.com/Axosoft/AxosoftTeamCity</download-url>
+    <email>behnama@axosoft.com</email>
+    <vendor>
+      <name>@VendorName@</name>
+      <url>@VendorURL@</url>
+      <logo>https://www.axosoft.com/img/axosoft-logo-dark.svg</logo>
+    </vendor>
+  </info>
+  <deployment use-separate-classloader="true" />
+</teamcity-plugin>

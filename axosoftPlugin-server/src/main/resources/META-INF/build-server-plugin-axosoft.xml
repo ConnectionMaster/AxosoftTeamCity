@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans.dtd">
+<beans default-autowire="constructor">
+    <bean id="axosoftFetcher" class="com.axosoft.teamcity.axosoftPlugin.AxosoftIssueFetcher">
+        <constructor-arg index="0" ref="ehCacheUtil"/>
+    </bean>
+
+    <bean id="axosoftType" class="com.axosoft.teamcity.axosoftPlugin.AxosoftIssueProviderType"/>
+    <bean id="axosoftFactory" class="com.axosoft.teamcity.axosoftPlugin.AxosoftIssueProviderFactory">
+        <constructor-arg index="0" ref="axosoftType"/>
+        <constructor-arg index="1" ref="axosoftFetcher"/>
+    </bean>
+   <bean id="axosoftIssueProvider" class="com.axosoft.teamcity.axosoftPlugin.AxosoftIssueProvider"/>
+</beans>
